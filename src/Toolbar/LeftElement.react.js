@@ -130,6 +130,12 @@ class LeftElement extends PureComponent {
         }
 
         let onPress = onLeftElementPress;
+        
+        let _name = "";
+        if (typeof leftElement === 'string' || leftElement instanceof String)
+            _name = leftElement;
+        else
+            _name = "menu";
 
         if (isSearchActive) {
             onPress = onSearchClose;
@@ -150,7 +156,7 @@ class LeftElement extends PureComponent {
             >
                 <IconToggle
                     key={leftElement}
-                    name={leftElement}
+                    name={_name}
                     color={flattenLeftElement.color}
                     onPress={onPress}
                     size={size}
