@@ -135,7 +135,7 @@ class LeftElement extends PureComponent {
         if (typeof leftElement === 'string' || leftElement instanceof String)
             _name = leftElement;
         else
-            _name = "";
+            _name = null;
 
         if (isSearchActive) {
             onPress = onSearchClose;
